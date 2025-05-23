@@ -27,16 +27,8 @@ pipeline {
         //     }
         // }
 
-        stage('Debug User and Path') {
-    steps {
-        sh """
-            whoami
-            echo \$PATH
-            which kubectl || echo 'kubectl not found'
-        """
-    }
-}
-       
+        
+        
         stage('Deploy') {
             
             steps {
